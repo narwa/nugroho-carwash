@@ -275,7 +275,7 @@ section {
 
 /* Footer Section */
 .footer {
-    background-color: #FF9149;  /* Changed from var(--dark-color) */
+    background-color: #FF9149;
     color: white;
     padding: 3rem 0;
 }
@@ -339,4 +339,24 @@ section {
 
 #contact {
     background-color: #FFECDB;
+}
+
+/* Reviews Section */
+#reviews .card {
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.review-item {
+    min-height: 250px;
+}
+
+.carousel-control-prev, 
+.carousel-control-next {
+    width: 5%;
+    color: var(--primary-color);
+}
+
+.carousel-indicators button {
+    background-color: var(--primary-color);
 }

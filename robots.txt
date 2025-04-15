@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /cgi-bin/
+
+Sitemap: https://nugroho-carwash.obahnow.com/sitemap.xml
+
+# Security directives
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+# Crawl delay to prevent server overload
+Crawl-delay: 10

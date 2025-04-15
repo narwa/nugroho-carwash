@@ -14,15 +14,15 @@ document.addEventListener('DOMContentLoaded', function() {
     
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
             // Remove active class from all links
             navLinks.forEach(l => l.classList.remove('active'));
             // Add active class to clicked link
             this.classList.add('active');
             
-            // Scroll to section with offset
+            // Get target section
             const targetId = this.getAttribute('href');
-            if (targetId !== '#') {
+            if (targetId.startsWith('#')) {
+                e.preventDefault();
                 const targetSection = document.querySelector(targetId);
                 const offset = 100;
                 const targetPosition = targetSection.offsetTop - offset;
@@ -31,6 +31,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     top: targetPosition,
                     behavior: 'smooth'
                 });
+                
+                // Update URL without page reload
+                history.pushState(null, null, targetId);
             }
         });
     });
@@ -54,6 +57,19 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    
+    // Handle initial hash URL
+    if (window.location.hash) {
+        const targetSection = document.querySelector(window.location.hash);
+        if (targetSection) {
+            const offset = 100;
+            const targetPosition = targetSection.offsetTop - offset;
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+        }
+    }
 });
 
 // Animation on scroll

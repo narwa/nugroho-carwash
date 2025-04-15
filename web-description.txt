@@ -50,6 +50,9 @@ color
 https://colorhunt.co/palette/60b5ffafddffffecdbff9149
 
 
+sudo certbot --nginx -d nugroho-carwash.obahnow.com
+
+
 backup
 
 <div class="row align-items-center">
