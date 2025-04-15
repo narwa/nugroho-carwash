@@ -1,0 +1,48 @@
+Nugroho Car Wash
+
+Kilau Sempurna, Tanpa Kompromi. Mobil kinclong bukan lagi impian. 
+Di Nugoho Car Wash, kami menghadirkan perawatan detail yang mengembalikan kemewahan kendaraan Anda. 
+Dengan produk premium dan tenaga ahli, setiap sudut mobil Anda akan bersih, terlindungi, dan memukau. 
+Buktikan sendiri, rasakan sensasi mobil baru setiap hari !
+
+
+Peralatan canggih (About Us)
+1. Hidolik H-Track
+2. Jet Steam 
+3. Show Wash
+4. Vacuum Cleaner
+
+Services
+1. Cuci Motor
+2. Cuci Mobil
+3. Cuci Bus & Elf
+4. Cuci Truck
+5. Free Antar-Jemput
+6. Spray anti karat
+
+Kenapa di Nugroho Car Wash ? (Benefits)
+1. Pelayanan prima oleh tenaga profesional
+2. Jaminan bersih setiap sudut
+3. Dicuci seperti punya sendiri
+4. Gratis Antar Jemput Kendaraan
+5. Harga bersahabat
+6. Bisa tukar kupon (10x) cuci gratis
+
+Kontak kami
+use gmap iframe
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1978.5217474368462!2d110.5391093716121!3d-7.349012898275561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a77d870655f8b%3A0xb405f845e88232e!2sNugroho%20car%20wash!5e0!3m2!1sen!2sid!4v1744693105836!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+Alamat
+Jl. Ponoyoso No.03, RT.07/RW.05, Kemetiran, Nyamat, Kec. Tengaran, Salatiga, Jawa Tengah 50775
+
+Phone Number
+0857-2933-6805
+
+
+Structure Project
+1. index.html
+2. services.html
+3. about-us.html
+4. benefit.html
+5. contact-us.html
+
