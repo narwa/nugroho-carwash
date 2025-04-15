@@ -68,15 +68,65 @@ body {
     }
 }
 
+/* Improved Scroll Animations */
 .animate-on-scroll {
     opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease;
+    transform: translateY(30px) scale(0.98);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .animate-on-scroll.animated {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
+}
+
+/* Enhanced Card Hover Effects */
+.card {
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), 
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* Button Animations */
+.btn {
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform: translateZ(0);
+}
+
+.btn:hover {
+    transform: translateY(-3px) translateZ(0);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Navbar Link Animation */
+.nav-link::after {
+    transition: width 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* Smooth Section Transitions */
+section {
+    scroll-behavior: smooth;
+}
+
+/* Pulse Animation for Important Elements */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.pulse-animation {
+    animation: pulse 2s infinite;
+}
+
+/* Add this to elements you want to highlight */
+.whatsapp-btn {
+    animation: pulse 2s infinite;
 }
 
 .btn-primary {

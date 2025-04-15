@@ -57,14 +57,20 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Animation on scroll
-window.addEventListener('scroll', function() {
-    const elements = document.querySelectorAll('.animate-on-scroll');
-    elements.forEach(element => {
-        const position = element.getBoundingClientRect();
-        if(position.top < window.innerHeight - 100) {
-            element.classList.add('animated');
+// Enhanced scroll animation observer
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animated');
         }
     });
+}, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+});
+
+document.querySelectorAll('.animate-on-scroll').forEach(el => {
+    observer.observe(el);
 });
 
 // Service and Equipment card interactions
