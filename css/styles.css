@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #0d6efd;
+    --primary-color: #60B5FF;
     --accent-color: #ff914d;
     --dark-color: #1a1a1a;
     --light-color: #f8f9fa;
@@ -22,26 +22,49 @@ body {
     display: flex;
     align-items: center;
     text-align: center;
+    background-attachment: fixed; /* Keep background fixed */
+    background-size: cover; /* Ensure full coverage */
+    background-position: center; /* Center the image */
 }
 
 .hero-section .display-4 {
     font-size: 2.8rem;
     margin-top: 2rem;
+    padding: 0 20px; /* Added padding for mobile */
 }
 
 .hero-section .lead {
     font-size: 1.2rem;
     margin: 2rem 0;
+    padding: 0 20px; /* Added padding for mobile */
 }
 
 @media (max-width: 768px) {
     .hero-section {
-        min-height: 50vh;
-        padding: 60px 0;
+        min-height: 80vh; /* Adjusted from 50vh to 80vh */
+        padding: 80px 0;
+        background-attachment: scroll; /* Disable fixed on mobile */
     }
     
     .hero-section .display-4 {
         font-size: 2rem;
+        margin-top: 1rem;
+    }
+
+    .hero-section .lead {
+        font-size: 1rem;
+        margin: 1.5rem 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        min-height: 70vh;
+        padding: 60px 0;
+    }
+    
+    .hero-section .display-4 {
+        font-size: 1.8rem;
     }
 }
 
@@ -202,19 +225,25 @@ section {
 
 /* Footer Section */
 .footer {
-    background-color: var(--dark-color);
+    background-color: #FF9149;  /* Changed from var(--dark-color) */
     color: white;
     padding: 3rem 0;
 }
 
 .footer a {
-    color: var(--light-color);
+    color: white;  /* Changed from var(--light-color) */
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer a:hover {
-    color: var(--accent-color);
+    color: var(--dark-color);  /* Changed hover color to dark for contrast */
+}
+
+.footer-heading {
+    color: white;  /* Changed from var(--accent-color) */
+    margin-bottom: 1.5rem;
+    font-weight: 600;
 }
 
 .footer-logo {
@@ -222,8 +251,9 @@ section {
     margin-bottom: 1.5rem;
 }
 
+/* Remove duplicate .footer-heading rule */
 .footer-heading {
-    color: var(--accent-color);
+    color: white;
     margin-bottom: 1.5rem;
     font-weight: 600;
 }
@@ -237,7 +267,7 @@ section {
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255,255,255,0.1);
+    border-top: 1px solid white; /* Changed from rgba(255,255,255,0.1) */
     padding-top: 1.5rem;
     margin-top: 2rem;
 }
@@ -252,25 +282,11 @@ section {
     }
 }
 
-/* Jargon Box Styling */
-.jargon-box {
-    backdrop-filter: blur(10px);
-    background-color: rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(255,255,255,0.3);
-    padding: 1.5rem;
-    border-radius: 10px;
-    max-width: 600px;
-    margin: 1rem auto;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+/* Services Section Background */
+#services {
+    background-color: #FFECDB;
 }
 
-/* WhatsApp Button Styling */
-.btn-success {
-    background-color: #25D366;
-    border-color: #25D366;
-}
-
-.btn-success:hover {
-    background-color: #128C7E;
-    border-color: #128C7E;
+#contact {
+    background-color: #FFECDB;
 }
