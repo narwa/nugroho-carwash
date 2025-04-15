@@ -13,18 +13,44 @@ body {
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                url('../images/front.jpeg') no-repeat center center/cover;
-    min-height: 100vh;
-    padding: 100px 0;
+    background: url('../images/front.jpeg') no-repeat center center;
+    background-size: cover;
+    padding: 150px 0;
     position: relative;
-    color: white;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    background-attachment: fixed; /* Keep background fixed */
-    background-size: cover; /* Ensure full coverage */
-    background-position: center; /* Center the image */
+}
+
+/* Add responsive background handling */
+@media (max-width: 768px) {
+    .hero-section {
+        background-position: center;
+        padding: 100px 0;
+        min-height: 60vh;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        background-position: center;
+        padding: 80px 0;
+        min-height: 50vh;
+    }
+}
+
+/* Ensure text remains readable on all backgrounds */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
 }
 
 .hero-section .display-4 {
