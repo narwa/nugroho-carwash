@@ -3,6 +3,50 @@
     --accent-color: #ff914d;
     --dark-color: #1a1a1a;
     --light-color: #f8f9fa;
+    --orange-bg: #FFECDB;
+    --footer-bg: #FF9149;
+    
+    /* Add spacing variables */
+    --section-padding: 5rem 0;
+    --section-padding-mobile: 3rem 0;
+    
+    /* Add transition variables */
+    --transition-standard: all 0.3s ease;
+    --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Add component organization */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('../images/front.jpeg') no-repeat center center;
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+    padding: 150px 0;
+}
+
+/* Add responsive utilities */
+@media (max-width: 768px) {
+    section {
+        padding: var(--section-padding-mobile);
+    }
+    
+    .hero-section {
+        min-height: 80vh;
+        padding: 80px 0;
+    }
+}
+
+/* Add performance improvements */
+.card, .btn, .nav-link {
+    transition: var(--transition-standard);
+}
+
+/* Add accessibility improvements */
+.nav-link:focus,
+.btn:focus {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
 }
 
 /* Global Styles */
